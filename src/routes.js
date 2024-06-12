@@ -1,0 +1,31 @@
+const express = require('express');
+const router = express.Router();
+const bdcontroller = require('./controllers/bdcontroller');
+
+router.get('/inventario', bdcontroller.buscarTodos);
+router.get('/inventario/:CPF', bdcontroller.buscarUm);
+router.post('/inventario', bdcontroller.inserirFuncionario);
+router.delete('/inventario/:CPF', bdcontroller.excluirFuncionario);
+router.put('/inventario/:CPF/nome', bdcontroller.atualizarNome);
+router.put('/inventario/:CPF/notebook', bdcontroller.atualizarNotebook);
+router.put('/inventario/:CPF/limpar-notebook', bdcontroller.limparNotebook);
+router.put('/inventario/:CPF/monitor1', bdcontroller.atualizarMonitor1);
+router.put('/inventario/:CPF/limpar-monitor1', bdcontroller.limparMonitor1);
+router.put('/inventario/:CPF/monitor2', bdcontroller.atualizarMonitor2);
+router.put('/inventario/:CPF/limpar-monitor2', bdcontroller.limparMonitor2);
+router.put('/inventario/:CPF/teclado', bdcontroller.atualizarTeclado);
+router.put('/inventario/:CPF/limpar-teclado', bdcontroller.limparTeclado);
+router.put('/inventario/:CPF/mouse', bdcontroller.atualizarMouse);
+router.put('/inventario/:CPF/limpar-mouse', bdcontroller.limparMouse);
+router.put('/inventario/:CPF/nobreak', bdcontroller.atualizarNobreak);
+router.put('/inventario/:CPF/limpar-nobreak', bdcontroller.limparNobreak);
+router.put('/inventario/:CPF/desktop', bdcontroller.atualizarDesktop);
+router.put('/inventario/:CPF/limpar-desktop', bdcontroller.limparDesktop);
+router.put('/inventario/:CPF/headset', bdcontroller.atualizarHeadset);
+router.put('/inventario/:CPF/limpar-headset', bdcontroller.limparHeadset);
+router.put('/inventario/:CPF/celular', bdcontroller.atualizarCelular);
+router.put('/inventario/:CPF/limpar-celular', bdcontroller.limparCelular);
+router.put('/inventario/:CPF/acessorios', bdcontroller.atualizarAcessorios);
+router.put('/inventario/:CPF/limpar-acessorios', bdcontroller.limparAcessorios);
+
+module.exports = router;
